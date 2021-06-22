@@ -46,6 +46,7 @@ function App() {
       <div className="post-list">{
         pinsList.list.map((pin, index) => {
           return (<div key={index} className="pins">
+            <img src={pin.images["236x"].url}/>
             <h2> {pin.board.id} </h2>
           </div>)
         })
