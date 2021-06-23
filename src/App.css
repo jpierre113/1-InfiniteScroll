@@ -4,7 +4,7 @@
   justify-content: center;
 }
 .post-list{
-  padding-top: 100px;
+  padding-top: 50px;
 }
 .card-body{
 display: flex;
@@ -14,6 +14,10 @@ display: flex;
   width: 700px;
 }
 
+.card-img{
+  border-radius: 5px;
+}
+
 .card-text{
-  padding-right: 10px;
+  text-align: center;
 }
