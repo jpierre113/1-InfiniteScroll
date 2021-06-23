@@ -53,7 +53,7 @@ function App() {
                 <Card.Img src={pin.images["236x"].url}/>
                 <Card.Text> {pin.description} </Card.Text>
               </Card.Body>
-          </Card>
+            </Card>
           )
         })
       }
