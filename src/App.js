@@ -45,9 +45,8 @@ function App() {
     <div className="App">
       <div className="post-list">{
         pinsList.list.map((pin, index) => {
-          <div key={index} className="pins"></div>
           return (
-            <Card>
+            <Card key={index}>
               <Card.Body>
                 <Card.Img src={pin.images["236x"].url}/>
                 <Card.Text> {pin.description} </Card.Text>
