@@ -9,18 +9,7 @@
 .card{
   padding-bottom: 10px;
 }
-.card-body{
-display: flex;
-  padding: 10px 0 10px 10px;
-  border: 1px black solid;
-  border-radius: 5px;
-  width: 700px;
-}
 
 .card-img{
   border-radius: 5px;
-}
-
-.card-text{
-  text-align: center;
 }
