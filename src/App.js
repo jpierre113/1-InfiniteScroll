@@ -43,7 +43,6 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Pinterest</h1>
       <div className="post-list">{
         pinsList.list.map((pin, index) => {
           <div key={index} className="pins"></div>
