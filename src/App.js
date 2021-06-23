@@ -34,8 +34,6 @@ function App() {
     })
   }, [page])
 
-    
-
   const handleObserver = (entities) => {
     const target = entities[0];
       if (target.isIntersecting) {
@@ -45,18 +43,20 @@ function App() {
   
   return (
     <div className="App">
-      <CardColumns>{
-        pinsList.list.map((pin, index) => {
-          return (
-            <Card key={index} style={{ width: '20rem' }}>
-              <Card.Body>
-                <Card.Img src={pin.images["236x"].url}/>
-                <Card.Text> {pin.description} </Card.Text>
-              </Card.Body>
-            </Card>
-          )
-        })
-      }
+      <h1>Kittintrest</h1>
+      <CardColumns>
+        {
+          pinsList.list.map((pin, index) => {
+            return (
+              <Card key={index} style={{ width: '30rem' }}>
+                <Card.Body>
+                  <Card.Img src={pin.images["474x"].url}/>
+                  <Card.Text> {pin.description} </Card.Text>
+                </Card.Body>
+              </Card>
+            )
+          })
+        }
         <div className="loading" ref={loader}></div>
       </CardColumns>
     </div>

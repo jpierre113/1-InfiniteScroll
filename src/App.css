@@ -2,14 +2,30 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 35px;
+  font-family: 'Rubik', sans-serif;
 }
-.post-list{
-  padding-top: 50px;
+
+.card-columns{
+  padding: 10px;
 }
 .card{
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .card-img{
   border-radius: 5px;
+}
+
+.card-text{
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+h1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #e71b22;
+  margin-left: 20px;
 }
