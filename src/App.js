@@ -2,9 +2,11 @@ import './App.css';
 import data from './nyc_ttp_pins.json'
 import React, { useState, useEffect, useRef } from 'react';
 import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const perPage = 10;
+  const perPage = 5;
   const [pinsData, setPins] = useState([...data]);
   const [pinsList, setPinsList] = useState({
       list: pinsData.slice(0, perPage)
@@ -32,8 +34,6 @@ function App() {
     })
   }, [page])
 
-    
-
   const handleObserver = (entities) => {
     const target = entities[0];
       if (target.isIntersecting) {
@@ -43,21 +43,22 @@ function App() {
   
   return (
     <div className="App">
-      <div className="post-list">{
-        pinsList.list.map((pin, index) => {
-          <div key={index} className="pins"></div>
-          return (
-            <Card>
-              <Card.Body>
-                <Card.Img src={pin.images["236x"].url}/>
-                <Card.Text> {pin.description} </Card.Text>
-              </Card.Body>
-            </Card>
-          )
-        })
-      }
+      <h1>Kittintrest</h1>
+      <CardColumns>
+        {
+          pinsList.list.map((pin, index) => {
+            return (
+              <Card key={index} style={{ width: '30rem' }}>
+                <Card.Body>
+                  <Card.Img src={pin.images["474x"].url}/>
+                  <Card.Text> {pin.description} </Card.Text>
+                </Card.Body>
+              </Card>
+            )
+          })
+        }
         <div className="loading" ref={loader}></div>
-      </div>
+      </CardColumns>
     </div>
   );
 }
