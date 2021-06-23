@@ -1,6 +1,7 @@
 import './App.css';
 import data from './nyc_ttp_pins.json'
 import React, { useState, useEffect, useRef } from 'react';
+import Card from 'react-bootstrap/Card';
 
 function App() {
   const perPage = 10;
@@ -42,12 +43,17 @@ function App() {
   
   return (
     <div className="App">
-      <h1>Pinterest</h1>
       <div className="post-list">{
         pinsList.list.map((pin, index) => {
-          return (<div key={index} className="pins">
-            <h2> {pin.board.id} </h2>
-          </div>)
+          <div key={index} className="pins"></div>
+          return (
+            <Card>
+              <Card.Body>
+                <Card.Img src={pin.images["236x"].url}/>
+                <Card.Text> {pin.description} </Card.Text>
+              </Card.Body>
+            </Card>
+          )
         })
       }
         <div className="loading" ref={loader}></div>
